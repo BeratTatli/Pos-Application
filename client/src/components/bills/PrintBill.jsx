@@ -3,7 +3,7 @@ import { Button, Modal } from "antd";
 const PrintBill = ({ isModalOpen, setIsModalOpen }) => {
   return (
     <Modal
-      title="Print Bill"
+      title="Fatura Yazdır"
       open={isModalOpen}
       footer={false}
       onCancel={() => setIsModalOpen(false)}
@@ -16,39 +16,41 @@ const PrintBill = ({ isModalOpen, setIsModalOpen }) => {
               <h2 className="text-4xl font-bold text-slate-700">LOGO</h2>
             </div>
             <div className="bill-details">
-              <div className="grid grid-cols-4 gap-12">
+              <div className="grid sm:grid-cols-4 grid-cols-3 gap-12">
                 <div className="text-md text-slate-500">
-                  <p className="font-bold text-slate-700">Bill Detail:</p>
+                  <p className="font-bold text-slate-700">Fatura Detayı:</p>
                   <p>Unwrapped</p>
-                  <p>Lemon Street 123</p>
-                  <p>Chicago</p>
-                  <p>PD 111</p>
+                  <p> Fake Street 123</p>
+                  <p> San Javier </p>
+                  <p> CA 1234</p>
                 </div>
                 <div className="text-md text-slate-500">
-                  <p className="font-bold text-slate-700">Bill:</p>
-                  <p>Berat Company</p>
-                  <p>Selvi Street 007</p>
-                  <p>BhayramPasha</p>
-                  <p>SK 125</p>
-                </div>
-                <div className="text-md text-slate-500">
-                  <div>
-                    <p className="font-bold text-slate-700">Bill Number:</p>
-                    <p>94387349</p>
-                  </div>
-                  <div className="mt-2">
-                    <p className="font-bold text-slate-700">Given Date:</p>
-                    <p>2023-06-19</p>
-                  </div>
+                  <p className="font-bold text-slate-700">Fatura:</p>
+                  The Boring Company
+                  <p> Tesla Street 007</p>
+                  <p> Frisco </p>
+                  <p> CA 0000</p>
                 </div>
                 <div className="text-md text-slate-500">
                   <div>
-                    <p className="font-bold text-slate-700">Terms:</p>
-                    <p>15 Days</p>
+                    <p className="font-bold text-slate-700">Fatura numarası:</p>
+                    <p>00041</p>
                   </div>
-                  <div className="mt-2">
-                    <p className="font-bold text-slate-700">Due:</p>
-                    <p>2025-06-19</p>
+                  <div>
+                    <p className="font-bold text-slate-700 mt-2">
+                      Veriliş Tarihi:
+                    </p>
+                    <p>2022-11-21</p>
+                  </div>
+                </div>
+                <div className="text-md text-slate-500 sm:block hidden">
+                  <div>
+                    <p className="font-bold text-slate-700">Şartlar:</p>
+                    <p>10 gün</p>
+                  </div>
+                  <div>
+                    <p className="font-bold text-slate-700 mt-2">Vade:</p>
+                    <p>2023-11-21</p>
                   </div>
                 </div>
               </div>
@@ -56,95 +58,142 @@ const PrintBill = ({ isModalOpen, setIsModalOpen }) => {
             <div className="bill-table-area mt-8">
               <table className="min-w-full divide-y divide-slate-500 overflow-hidden">
                 <thead>
-                  <tr
-                    className="border-b
-                   border-slate-200"
-                  >
+                  <tr className="border-b border-slate-200">
                     <th
                       scope="col"
-                      className="py-3.5 pl-4 text-left
-                            text-sm font-normal text-slate-700 sm:pl-6 md:pl-0 sm:table-cell hidden"
+                      className="py-3.5 text-left text-sm font-normal text-slate-700 md:pl-0 sm:table-cell hidden"
                     >
-                      Image
+                      Görsel
                     </th>
                     <th
                       scope="col"
-                      className="py-3.5 pl-4 text-left
-                            text-sm font-normal text-slate-700 sm:pl-6 md:pl-0 sm:table-cell hidden"
+                      className="py-3.5 text-left text-sm font-normal text-slate-700 md:pl-0 sm:table-cell hidden"
                     >
-                      Title
+                      {" "}
+                      Başlık
+                    </th>
+                    <th
+                      colSpan={4}
+                      scope="col"
+                      className="py-3.5 text-left text-sm font-normal text-slate-700 md:pl-0 sm:hidden"
+                    >
+                      {" "}
+                      Başlık
                     </th>
                     <th
                       scope="col"
-                      className="py-3.5 pl-4 text-center
-                            text-sm font-normal text-slate-700 sm:pl-6 md:pl-0 sm:table-cell hidden"
+                      className="py-3.5 text-center text-sm font-normal text-slate-700 md:pl-0 sm:table-cell hidden"
                     >
-                      Price
+                      Fiyat
                     </th>
                     <th
                       scope="col"
-                      className="py-3.5 pl-4 text-center
-                            text-sm font-normal text-slate-700 sm:pl-6 md:pl-0 sm:table-cell hidden"
+                      className="py-3.5 text-center text-sm font-normal text-slate-700 md:pl-0 sm:table-cell hidden"
                     >
-                      Count
+                      Adet
                     </th>
                     <th
                       scope="col"
-                      className="py-3.5 pl-4 text-end
-                            text-sm font-normal text-slate-700 sm:pl-6 md:pl-0 sm:table-cell hidden"
+                      className="py-3.5 text-end text-sm font-normal text-slate-700 md:pl-0"
                     >
-                      Total
+                      Toplam
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="border-b border-slate-200">
-                    <td className="py-4">
+                    <td className="py-4 sm:table-cell hidden">
                       <img
                         src="https://i.lezzet.com.tr/images-xxlarge-secondary/elma-nasil-yenir-221135ca-f383-474c-a4f5-ad02a45db978.jpg"
                         alt=""
-                        className="w-12 h-12 object-contain"
+                        className="w-12 h-12 object-cover"
                       />
                     </td>
-                    <td className="py-4">
-                      <span className="font-medium">Apple</span>
+                    <td className="py-4 sm:table-cell hidden">
+                      <div className="flex flex-col">
+                        <span className="font-medium">Şalgam</span>
+                        <span className="sm:hidden inline-block text-xs">
+                          Birim Fiyatı 5₺
+                        </span>
+                      </div>
                     </td>
-                    <td className="py-4 text-center">
-                      <span>30₺</span>
+                    <td className="py-4 sm:hidden" colSpan={4}>
+                      <div className="flex flex-col">
+                        <span className="font-medium">Şalgam</span>
+                        <span className="sm:hidden inline-block text-xs">
+                          Birim Fiyatı 5₺
+                        </span>
+                      </div>
                     </td>
-                    <td className="py-4 text-center">
-                      <span>3</span>
+                    <td className="py-4 text-center sm:table-cell hidden">
+                      <span>5₺</span>
+                    </td>
+                    <td className="py-4 sm:text-center text-right sm:table-cell hidden">
+                      <span>1</span>
                     </td>
                     <td className="py-4 text-end">
-                      <span>90₺</span>
+                      <span>5.00₺</span>
                     </td>
                   </tr>
                 </tbody>
                 <tfoot>
                   <tr>
-                    <th className="text-right pt-6" colSpan="4" scope="row">
+                    <th
+                      className="text-right pt-4 sm:table-cell hidden"
+                      colSpan="4"
+                      scope="row"
+                    >
                       <span className="font-normal text-slate-700">
-                        SubTotal
+                        Ara Toplam
                       </span>
                     </th>
+                    <th
+                      className="text-left pt-4 sm:hidden"
+                      scope="row"
+                      colSpan="4"
+                    >
+                      <p className="font-normal text-slate-700">Ara Toplam</p>
+                    </th>
                     <th className="text-right pt-4" scope="row">
-                      <span className="font-normal text-slate-700">78₺</span>
+                      <span className="font-normal text-slate-700">61₺</span>
                     </th>
                   </tr>
                   <tr>
-                    <th className="text-right pt-4" colSpan="4" scope="row">
-                      <span className="font-normal text-slate-700">Tax</span>
+                    <th
+                      className="text-right pt-4 sm:table-cell hidden"
+                      colSpan="4"
+                      scope="row"
+                    >
+                      <span className="font-normal text-slate-700">KDV</span>
+                    </th>
+                    <th
+                      className="text-left pt-4 sm:hidden"
+                      scope="row"
+                      colSpan="4"
+                    >
+                      <p className="font-normal text-slate-700">KDV</p>
                     </th>
                     <th className="text-right pt-4" scope="row">
-                      <span className="font-normal text-red-600">+6.2₺</span>
+                      <span className="font-normal text-red-600">+4.88₺</span>
                     </th>
                   </tr>
                   <tr>
-                    <th className="text-right pt-4" colSpan="4" scope="row">
-                      <span className="font-normal text-slate-700">Total</span>
+                    <th
+                      className="text-right pt-4 sm:table-cell hidden"
+                      colSpan="4"
+                      scope="row"
+                    >
+                      <span className="font-normal text-slate-700">Genel Toplam</span>
+                    </th>
+                    <th
+                      className="text-left pt-4 sm:hidden"
+                      scope="row"
+                      colSpan="4"
+                    >
+                      <p className="font-normal text-slate-700">Genel Toplam</p>
                     </th>
                     <th className="text-right pt-4" scope="row">
-                      <span className="font-normal text-slate-700">84.2₺</span>
+                      <span className="font-normal text-slate-700">65.88₺</span>
                     </th>
                   </tr>
                 </tfoot>
@@ -169,7 +218,9 @@ const PrintBill = ({ isModalOpen, setIsModalOpen }) => {
         </div>
       </section>
       <div className="flex justify-end mt-4">
-        <Button type="primary" size="large">Print</Button>
+        <Button type="primary" size="large">
+          Yazdır
+        </Button>
       </div>
     </Modal>
   );
