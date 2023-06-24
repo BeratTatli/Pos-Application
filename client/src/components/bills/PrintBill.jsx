@@ -18,14 +18,14 @@ const PrintBill = ({ isModalOpen, setIsModalOpen }) => {
             <div className="bill-details">
               <div className="grid sm:grid-cols-4 grid-cols-3 gap-12">
                 <div className="text-md text-slate-500">
-                  <p className="font-bold text-slate-700">Fatura Detayı:</p>
+                  <p className="font-bold text-slate-700">Bill Detail:</p>
                   <p>Unwrapped</p>
                   <p> Fake Street 123</p>
                   <p> San Javier </p>
                   <p> CA 1234</p>
                 </div>
                 <div className="text-md text-slate-500">
-                  <p className="font-bold text-slate-700">Fatura:</p>
+                  <p className="font-bold text-slate-700">Bill:</p>
                   The Boring Company
                   <p> Tesla Street 007</p>
                   <p> Frisco </p>
@@ -33,23 +33,23 @@ const PrintBill = ({ isModalOpen, setIsModalOpen }) => {
                 </div>
                 <div className="text-md text-slate-500">
                   <div>
-                    <p className="font-bold text-slate-700">Fatura numarası:</p>
+                    <p className="font-bold text-slate-700">Bill Number:</p>
                     <p>00041</p>
                   </div>
                   <div>
                     <p className="font-bold text-slate-700 mt-2">
-                      Veriliş Tarihi:
+                      Given Date:
                     </p>
                     <p>2022-11-21</p>
                   </div>
                 </div>
                 <div className="text-md text-slate-500 sm:block hidden">
                   <div>
-                    <p className="font-bold text-slate-700">Şartlar:</p>
+                    <p className="font-bold text-slate-700">Terms:</p>
                     <p>10 gün</p>
                   </div>
                   <div>
-                    <p className="font-bold text-slate-700 mt-2">Vade:</p>
+                    <p className="font-bold text-slate-700 mt-2">Maturity:</p>
                     <p>2023-11-21</p>
                   </div>
                 </div>
@@ -63,14 +63,14 @@ const PrintBill = ({ isModalOpen, setIsModalOpen }) => {
                       scope="col"
                       className="py-3.5 text-left text-sm font-normal text-slate-700 md:pl-0 sm:table-cell hidden"
                     >
-                      Görsel
+                      Image
                     </th>
                     <th
                       scope="col"
                       className="py-3.5 text-left text-sm font-normal text-slate-700 md:pl-0 sm:table-cell hidden"
                     >
                       {" "}
-                      Başlık
+                      Title
                     </th>
                     <th
                       colSpan={4}
@@ -78,25 +78,25 @@ const PrintBill = ({ isModalOpen, setIsModalOpen }) => {
                       className="py-3.5 text-left text-sm font-normal text-slate-700 md:pl-0 sm:hidden"
                     >
                       {" "}
-                      Başlık
+                      Title
                     </th>
                     <th
                       scope="col"
                       className="py-3.5 text-center text-sm font-normal text-slate-700 md:pl-0 sm:table-cell hidden"
                     >
-                      Fiyat
+                      Price
                     </th>
                     <th
                       scope="col"
                       className="py-3.5 text-center text-sm font-normal text-slate-700 md:pl-0 sm:table-cell hidden"
                     >
-                      Adet
+                      Count
                     </th>
                     <th
                       scope="col"
                       className="py-3.5 text-end text-sm font-normal text-slate-700 md:pl-0"
                     >
-                      Toplam
+                      Total
                     </th>
                   </tr>
                 </thead>
@@ -111,17 +111,17 @@ const PrintBill = ({ isModalOpen, setIsModalOpen }) => {
                     </td>
                     <td className="py-4 sm:table-cell hidden">
                       <div className="flex flex-col">
-                        <span className="font-medium">Şalgam</span>
+                        <span className="font-medium">Elma</span>
                         <span className="sm:hidden inline-block text-xs">
-                          Birim Fiyatı 5₺
+                          Birim Priceı 5₺
                         </span>
                       </div>
                     </td>
                     <td className="py-4 sm:hidden" colSpan={4}>
                       <div className="flex flex-col">
-                        <span className="font-medium">Şalgam</span>
+                        <span className="font-medium">Elma</span>
                         <span className="sm:hidden inline-block text-xs">
-                          Birim Fiyatı 5₺
+                          Birim Priceı 5₺
                         </span>
                       </div>
                     </td>
@@ -144,7 +144,7 @@ const PrintBill = ({ isModalOpen, setIsModalOpen }) => {
                       scope="row"
                     >
                       <span className="font-normal text-slate-700">
-                        Ara Toplam
+                        SubTotal
                       </span>
                     </th>
                     <th
@@ -152,7 +152,7 @@ const PrintBill = ({ isModalOpen, setIsModalOpen }) => {
                       scope="row"
                       colSpan="4"
                     >
-                      <p className="font-normal text-slate-700">Ara Toplam</p>
+                      <p className="font-normal text-slate-700">SubTotal</p>
                     </th>
                     <th className="text-right pt-4" scope="row">
                       <span className="font-normal text-slate-700">61₺</span>
@@ -164,14 +164,14 @@ const PrintBill = ({ isModalOpen, setIsModalOpen }) => {
                       colSpan="4"
                       scope="row"
                     >
-                      <span className="font-normal text-slate-700">KDV</span>
+                      <span className="font-normal text-slate-700">Tax</span>
                     </th>
                     <th
                       className="text-left pt-4 sm:hidden"
                       scope="row"
                       colSpan="4"
                     >
-                      <p className="font-normal text-slate-700">KDV</p>
+                      <p className="font-normal text-slate-700">Tax</p>
                     </th>
                     <th className="text-right pt-4" scope="row">
                       <span className="font-normal text-red-600">+4.88₺</span>
@@ -183,14 +183,14 @@ const PrintBill = ({ isModalOpen, setIsModalOpen }) => {
                       colSpan="4"
                       scope="row"
                     >
-                      <span className="font-normal text-slate-700">Genel Toplam</span>
+                      <span className="font-normal text-slate-700">Total</span>
                     </th>
                     <th
                       className="text-left pt-4 sm:hidden"
                       scope="row"
                       colSpan="4"
                     >
-                      <p className="font-normal text-slate-700">Genel Toplam</p>
+                      <p className="font-normal text-slate-700">Total</p>
                     </th>
                     <th className="text-right pt-4" scope="row">
                       <span className="font-normal text-slate-700">65.88₺</span>
@@ -201,15 +201,7 @@ const PrintBill = ({ isModalOpen, setIsModalOpen }) => {
               <div className="py-9">
                 <div className="border-t pt-9 border-slate-200">
                   <p className="text-sm font-light text-slate-700">
-                    Ödeme koşulları 14 gündür. Paketlenmemiş Borçların Geç
-                    Ödenmesi Yasası 0000'e göre, serbest çalışanların bu süreden
-                    sonra borçların ödenmemesi durumunda 00.00 gecikme ücreti
-                    talep etme hakkına sahip olduklarını ve bu noktada bu ücrete
-                    ek olarak yeni bir fatura sunulacağını lütfen unutmayın.
-                    Revize faturanın 14 gün içinde ödenmemesi durumunda, vadesi
-                    geçmiş hesaba ek faiz ve %8 yasal oran artı %0,5 Bank of
-                    England tabanı olmak üzere toplam %8,5 uygulanacaktır.
-                    Taraflar Kanun hükümleri dışında sözleşme yapamazlar.
+                  Payment terms are 14 days. Please note that according to the Late Payment of Unpackaged Debts Act 0000, freelancers are entitled to charge a 00.00 late fee if debts are not paid after this time, at which point a new invoice will be submitted in addition to this fee. If the revised invoice is not paid within 14 days, additional interest and 8% statutory rate plus 0.5% Bank of England base will be applied to the overdue account, for a total of 8.5%. The parties cannot make a contract other than the provisions of the Law.
                   </p>
                 </div>
               </div>
@@ -219,7 +211,7 @@ const PrintBill = ({ isModalOpen, setIsModalOpen }) => {
       </section>
       <div className="flex justify-end mt-4">
         <Button type="primary" size="large">
-          Yazdır
+          Print
         </Button>
       </div>
     </Modal>
