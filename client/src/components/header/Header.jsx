@@ -40,7 +40,7 @@ const Header = () => {
               to={"/cart"}
               className="menu-link flex flex-col hover:text-[#40a9ff] transition-all"
             >
-              <ShoppingCartOutlined className="md:tex-2xl text-xl" />
+              <ShoppingCartOutlined className="md:text-2xl text-xl" />
               <span className="md:text-xs text-[10px]">Cart</span>
             </Link>
           </Badge>
